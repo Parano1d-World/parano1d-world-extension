@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Parano1d World</title><link rel="stylesheet" href="popup.css"/><link rel="stylesheet" href="theme-world.css"/><script src="theme-boot.js"></script></head>
+<body>
+<header class="top">
+  <img class="emblem" src="icons/emblem96.png" alt="" width="34" height="34"/><i class="cy-emblem" aria-hidden="true"></i>
+  <div class="brand"><b>Parano<em>1</em>d World</b><small id="site"></small></div>
+  <button id="pchip" class="pchip" type="button" data-state="none" aria-label="NOID price"><span><img class="noid-ico" src="icons/noid-coin-128.png" alt="" width="14" height="14"/>NOID</span><b id="pchip-val">—</b><i aria-hidden="true"></i></button>
+  <button id="lock" class="icon" type="button" title="Lock wallet" aria-label="Lock wallet" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 11h12v9H6z"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></button>
+  <button id="theme" class="icon" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu" title="Appearance" aria-label="Appearance"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button>
+  <button id="expand" class="icon" type="button" title="Open expanded view" aria-label="Open expanded view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg></button>
+  <div id="theme-menu" class="menu" role="radiogroup" aria-label="Appearance" hidden>
+    <button role="radio" data-theme-choice="system" type="button">System</button><button role="radio" data-theme-choice="dark" type="button">Dark</button><button role="radio" data-theme-choice="light" type="button">Light</button><button role="radio" data-theme-choice="cyber" type="button">Cyber</button><button role="radio" data-theme-choice="world" type="button">World</button>
+    <button id="paranoid" class="para" role="switch" aria-checked="false" type="button">Paranoid</button>
+  </div>
+</header>
+<main id="app" aria-live="polite"></main>
+<nav id="nav" class="nav" aria-label="Sections"></nav>
+<script src="qr-vendor.js"></script><script type="module" src="popup.js"></script>
+</body></html>

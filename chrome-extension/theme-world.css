@@ -1,0 +1,41 @@
+/* Parano1d World · the game's own look in the extension (same values as the website's theme-world.css and iOS 169).
+   Frames: World-frameA (cards) 120/200/110/200, World-frameB (buttons) 103/120, World-frameC (inputs, tabs, menu) 51/99.
+   Paranoid: ignotus orange; frames use the pre-shifted *-paranoid.png copies, the emblem hue-rotate(-62deg). */
+[data-theme=world]{--bg:#0b1519;--bg2:#0b1519;--card:#0c191b;--card2:#0a1517;--line:#2a3b35;--line2:#4b6358;--text:#e9f9e2;--muted:#a9b8ac;--dim:#8d9c90;
+  --green:#9bde7e;--green2:#b5ea8f;--glow:#9bde7e40;--chip:#1f362d;--sky:#9fd8c4;--ink:#0c191b;
+  --wf:-apple-system,BlinkMacSystemFont,'SF Pro Text',Inter,'Segoe UI',Roboto,system-ui,sans-serif;
+  --fA:url(world/World-frameA.png);--fB:url(world/World-frameB.png);--fC:url(world/World-frameC.png);--btn-a:#c8f59e;--btn-b:#8fc97c;--hue:none}
+[data-theme=world][data-paranoid=on]{--line:#4a3520;--line2:#6b4a28;--text:#fff3df;--muted:#ffcf9e;--dim:#d9a874;--green:#ff9b36;--green2:#ff8a12;--glow:#ff9b3640;--chip:#2a1806;--sky:#ffd7a8;
+  --fA:url(world/World-frameA-paranoid.png);--fB:url(world/World-frameB-paranoid.png);--fC:url(world/World-frameC-paranoid.png);--btn-a:#ffc37d;--btn-b:#ff9b36;--hue:hue-rotate(-62deg)}
+[data-theme=world] body{background:radial-gradient(ellipse 80% 45% at 50% 100%,#9bde7e12,transparent 70%),linear-gradient(180deg,#091015,#0b1519 50%,#0a1714) fixed,#0b1519}
+[data-theme=world][data-paranoid=on] body{background:radial-gradient(ellipse 80% 45% at 50% 100%,#ff9b3612,transparent 70%),linear-gradient(180deg,#091015,#0b1519 50%,#0a1714) fixed,#0b1519}
+[data-theme=world] body::before{display:none}
+[data-theme=world] :is(body,h1,h2,h3,.bal,.brand b,button,input,.label,.sect){font-family:var(--wf)!important}
+[data-theme=world] :is(.mono,.addr){font-family:ui-monospace,'SF Mono',Menlo,monospace!important}
+[data-theme=world] :is(h1,h2,h3,.brand b){color:var(--text)!important;font-weight:900!important;text-transform:uppercase;letter-spacing:.06em}
+[data-theme=world] .brand b em{font-style:normal;color:var(--green)}
+[data-theme=world] :is(.label,.sect){color:var(--green);font-weight:800!important;text-transform:uppercase;letter-spacing:.12em}
+[data-theme=world] .bal{font-weight:900!important;text-shadow:none}
+[data-theme=world] button{font-weight:800!important;text-transform:uppercase;letter-spacing:.08em}
+[data-theme=world] .cy-emblem{-webkit-mask:none;mask:none;background:url(world/World-brand.png) center/contain no-repeat;filter:var(--hue) drop-shadow(0 0 6px var(--glow))}
+/* cards and rows: the riveted frame */
+[data-theme=world] :is(.card,.acct,.tok,.nft){clip-path:none!important;background:transparent!important;padding:20px 24px}
+[data-theme=world] :is(.card,.acct,.tok,.nft)::before{inset:0!important;clip-path:none!important;background:none!important;border-style:solid;border-color:transparent;border-width:0;
+  border-image:var(--fA) 120 200 110 200 fill / 24px 40px 22px 40px stretch}
+[data-theme=world] :is(.acct,.tok)::before{border-image:var(--fB) 103 120 fill / 25.75px 30px stretch}
+[data-theme=world] :is(.acct,.tok){padding:14px 24px}
+[data-theme=world] .acct.on{color:var(--green2)}
+/* buttons: the bar frame, main action lit with the game gradient */
+[data-theme=world] button{clip-path:none!important;background:transparent!important;color:var(--text)}
+[data-theme=world] button::before{inset:0!important;clip-path:none!important;background:none!important;border-style:solid;border-color:transparent;border-width:0;border-image:var(--fC) 51 99 fill / 11px 22px stretch}
+[data-theme=world] button.primary{color:#0c191b!important}
+[data-theme=world] button.primary::after{content:'';position:absolute;inset:6px 7px;z-index:-1;pointer-events:none;background:linear-gradient(180deg,var(--btn-a),var(--btn-b));
+  clip-path:polygon(7px 0,calc(100% - 7px) 0,100% 7px,100% calc(100% - 7px),calc(100% - 7px) 100%,7px 100%,0 calc(100% - 7px),0 7px)}
+[data-theme=world] button:hover::before{filter:brightness(1.18)}
+[data-theme=world] :is(.tabs button,.menu button)::before{display:none}
+[data-theme=world] .tabs{border:0;border-image:var(--fC) 51 99 fill / 12px 24px stretch;border-style:solid;border-width:12px 24px;background:transparent;padding:0}
+[data-theme=world] .tabs button[aria-selected=true]{background:var(--chip)!important;color:var(--green2);border-radius:6px}
+[data-theme=world] .menu{background:#0c191b;border:2px solid var(--line2);border-radius:8px}
+[data-theme=world] input{background:transparent!important;border-style:solid!important;border-color:transparent!important;border-width:12px 24px!important;border-image:var(--fC) 51 99 fill / 12px 24px stretch!important;border-radius:0}
+[data-theme=world] .addr{background:#0c191bcc;border:1px solid var(--line2);border-radius:8px}
+[data-theme=world] .qr{outline-color:var(--green)}

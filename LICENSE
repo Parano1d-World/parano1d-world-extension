@@ -1,0 +1,21 @@
+Parano1d World Source-Available Audit License
+Copyright (c) 2026 KoAjent LLC. All rights reserved.
+
+This repository is published so that anyone can check how Parano1d World software handles their keys and their data.
+
+1. Permitted
+   a. Reading, downloading and building this source to review, audit and test it.
+   b. Running builds you make yourself, on your own devices, for evaluation.
+   c. Publishing security findings and analysis, with short excerpts where needed to explain them. Please report a
+      vulnerability privately to support@koajent.com before publishing it.
+
+2. Not permitted without written permission from KoAjent LLC
+   a. Distributing this source or builds made from it, changed or unchanged, including in app or extension stores
+      or as a competing product or service.
+   b. Using this source, in whole or in part, in another product or service.
+   c. Using the Parano1d World names, logos, icons or other branding.
+
+3. Third-party components keep their own licenses, as noted in the files that contain them.
+
+4. No warranty. The source is provided "as is", without warranty of any kind. KoAjent LLC is not liable for any claim,
+   damages or other liability, including any loss of funds, arising from the source or its use.
